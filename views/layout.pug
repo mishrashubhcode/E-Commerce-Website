@@ -1,0 +1,33 @@
+// views/layout.pug
+doctype html
+html
+  head
+    title TechWorld - Home
+    link(rel="stylesheet",type="text/css", href="/css/styles.css")
+
+  body
+    header
+      h1 TechWorld - Your One-Stop Tech Shop!
+      nav
+        ul.navbar
+          li
+            a(href="/") Home
+          li
+            a(href="/about") About
+          li
+            a(href="/contact") Contact
+
+
+    main
+      h2 Welcome to TechWorld!
+      p Browse our latest tech products and find the perfect gadgets for you.
+
+      h3 Featured Products
+      each product in products
+        .product
+          img(src=product.image, alt=product.name)
+          h4.product-name= product.name
+          p.product-price= product.price
+
+    footer
+      p &copy; 2023 TechWorld. All rights reserved- shubham_kumar_mishra.
